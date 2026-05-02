@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0c0d;
+  --color-panel: #141619;
+  --color-panel-strong: #191c20;
+  --color-panel-soft: #101214;
+  --color-border: #272b31;
+  --color-border-strong: #3a4048;
+  --color-text: #f2f3f5;
+  --color-text-soft: #959da8;
+  --color-accent: #d9ddd7;
+  --color-accent-ink: #101214;
+  --color-danger: #ff7a59;
+  --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+:root {
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(217, 221, 215, 0.22);
+}
+
+.surface {
+  border: 1px solid var(--color-border);
+  background: var(--color-panel);
+}
+
+.surface-soft {
+  border: 1px solid var(--color-border);
+  background: var(--color-panel-soft);
+}
+
+.control {
+  border: 1px solid var(--color-border);
+  background: var(--color-panel-strong);
+  color: var(--color-text);
+  border-radius: 0;
+}
+
+.control:focus {
+  outline: 1px solid var(--color-border-strong);
+  outline-offset: 0;
+}
+
+.slider {
+  accent-color: var(--color-accent);
+}
+
+.icon-button {
+  border: 1px solid var(--color-border);
+  background: var(--color-panel-strong);
+  color: var(--color-text);
+}
+
+.icon-button:hover {
+  border-color: var(--color-border-strong);
+}
+
+.chip {
+  border: 1px solid var(--color-border);
+  background: var(--color-panel-strong);
+}
+
+.chip[data-active="true"] {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+input[type="range"] {
+  margin: 0;
+}
